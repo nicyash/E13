@@ -1,0 +1,22 @@
+.contacts {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    border-collapse: collapse;
+}
+.contacts th {
+    font-weight: bold;
+    padding: 5px;
+    background: #7cc8f8;
+    border: 1px solid #dddddd;
+}
+.contacts td {
+    border: 1px solid #dddddd;
+    padding: 5px;
+}
+tr:nth-child(odd){
+    background: #7cc8f8;
+}
+tr:nth-child(even){
+    background: #fff;
+}
