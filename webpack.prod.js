@@ -1,22 +1,25 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: './src/index.js',
     devServer: {
-        contentBase: './dist',
-        hot: true,
-        stats:{
-            children: false,
-            maxModules: 0
-        }
+        static: './',
+        hot: false,
+        open: true,
     },
+    devtool: 'inline-source-map',
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Development',
+            title: 'Production',
+            template: 'index.html',
             filename: 'index.html'
         }),
     ],
+    performance: {
+        maxEntrypointSize: 512000,
+        maxAssetSize: 512000
+    },
     output: {
         filename: 'main.js',
     },

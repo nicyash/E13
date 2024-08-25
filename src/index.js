@@ -19,7 +19,7 @@ function printUserCard(result) {
         <td>${result[key].email}</td>
         <td>${result[key].phone}</td>
         `
-            document.querySelector('.contacts').appendChild(row)
+        document.querySelector('.contacts').appendChild(row)
 
-        }
+    }
 }
